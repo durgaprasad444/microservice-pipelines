@@ -2,7 +2,7 @@ def createDeploymentJob(jobName, repoUrl) {
     pipelineJob(jobName) {
          parameters{
     stringParam('DEV', 'What environment?', 'Environment')
-    stringParam('DEV', 'QA', 'select environment')
+    
 }
         definition {
             cpsScm {
