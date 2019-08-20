@@ -17,7 +17,7 @@ def createDeploymentJob(jobName, repoUrl) {
                         }
                     }
                 }
-                scriptPath("Jenkinsfile")
+                scriptPath("myfile")
             }
         }
     }
@@ -26,7 +26,7 @@ def createDeploymentJob(jobName, repoUrl) {
 
 
 def buildPipelineJobs() {
-    def repo = "https://github.com/kcrane3576/"
+    def repo = "git clone https://durga444@bitbucket.org/durga444/"
     def repoUrl = repo + jobName + ".git"
     def deployName = jobName + "_deploy"
     def testName = jobName + "_test"
