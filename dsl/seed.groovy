@@ -1,5 +1,8 @@
 def createDeploymentJob(jobName, repoUrl) {
     pipelineJob(jobName) {
+        parameters {
+        stringParam('COMMIT', 'HEAD', 'Commit to build')
+    }
         definition {
             cpsScm {
                 scm {
