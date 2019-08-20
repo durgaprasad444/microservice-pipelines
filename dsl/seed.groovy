@@ -1,7 +1,7 @@
 def createDeploymentJob(jobName, repoUrl) {
     pipelineJob(jobName) {
          parameters{
-    stringParam('ENV', 'DEV', 'What environment?')
+    stringParam('ENV', '', 'What environment?')
     
 }
         definition {
