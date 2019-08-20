@@ -1,7 +1,10 @@
 def createDeploymentJob(jobName, repoUrl) {
     pipelineJob(jobName) {
-        parameters {
-        stringParam('COMMIT', 'HEAD', 'Commit to build')
+         parameters {
+        string(defaultValue: "DEV", description: 'What environment?', name: 'Environment')
+        choice(choices: ['DEV', 'QA', 'QA2'], description: 'select environment', name: 'options')
+        string(name: 'company_parameter', defaultValue: '', description: 'The company the pipeline runs in')
+        string(name: 'test1', defaultValue: '', description: 'The company the pipeline runs in')
     }
         definition {
             cpsScm {
