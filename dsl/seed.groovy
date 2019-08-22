@@ -1,3 +1,4 @@
+@Library('jenkins-shared-library-poc') _
 def createDeploymentJob(jobName, repoUrl) {
     pipelineJob(jobName) {
          parameters{
