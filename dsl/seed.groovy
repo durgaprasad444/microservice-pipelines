@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 @Library('jenkins-shared-library-poc') _
 def createDeploymentJob(jobName, repoUrl) {
     pipelineJob(jobName) {
